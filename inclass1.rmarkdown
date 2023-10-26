@@ -1,0 +1,42 @@
+---
+title: "inclass1"
+author: "Gözde Uğur"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+editor: visual
+---
+
+
+### Amazon Products Dataset 2023
+
+
+```{r}
+
+library(dplyr)
+# Using read.csv()
+myData = read.csv("/Users/gozde.ugur/Downloads/archive (3)/amazon_products.csv") 
+en_cok_satanlar <- myData %>% 
+  arrange(desc(boughtInLastMonth)) %>%  # satisadedi sütununa göre azalan sırada sırala
+  head(5)  # İlk 5 kaydı getirilk_5_kayit 
+# Show only selected columns
+top_5 <- en_cok_satanlar[, c("title","stars", "price" ,"boughtInLastMonth")]
+print(top_5)
+
+
+```
+
+```{r}
+#kategori bazında grupla, satışları topla
+category_sales <- myData %>% 
+                  group_by(category_id) %>%
+                  summarise(category_sale=sum(boughtInLastMonth)) %>%
+                  ungroup()
+
+
+print(category_sales)
+```
+
