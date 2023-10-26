@@ -10,6 +10,7 @@ output:
 editor: visual
 ---
 
+
 ## About Me
 
 I'm **Gözde Uğur**. I've been working as Senior Data Analyst at Trendyol for almost 2 years. Since graduating from university, I have worked in various data analyst roles where I mainly used SQL. I want to make sophisticated analyzes and visualizations of data with what I learned in this program. You can check [My Linkedin Page](https://www.linkedin.com/in/gozde-ugur-000/) for further info.
@@ -28,6 +29,7 @@ The reason I chose this video called [*Bridging the Gap between SQL and R*](http
 
 ### Amazon Products Dataset 2023
 
+
 ```{r}
 library(dplyr)
 # Using read.csv()
@@ -40,6 +42,7 @@ secilen_sutunlar <- en_cok_satanlar[, c("title","stars", "price" ,"boughtInLastM
 print(secilen_sutunlar)
 
 ```
+
 
 Since I work in the e-commerce industry, [**Amazon Products Dataset 2023**](https://www.kaggle.com/datasets/asaniczka/amazon-products-dataset-2023-1-4m-products) attracted my attention. Reasons why I find this dataset useful for out course:
 
@@ -57,6 +60,7 @@ A histogram is like a bar chart as it uses bars of varying height to represent d
 
 **Example:** 
 
+
 ```{r}
 # Histogram for Maximum Daily Temperature 
 data(airquality) 
@@ -69,6 +73,7 @@ Maximum Temperature(Daily)",
 
 
 ```
+
 
 ## Hypothesis Testing in R Programming
 
@@ -88,6 +93,7 @@ help("t.test")
 
 **Example:** 
 
+
 ```{r}
 # Defining sample vector
 x <- rnorm(100)
@@ -96,6 +102,7 @@ x <- rnorm(100)
 t.test(x, mu = 5)
 
 ```
+
 
 ## Reading a .csv File in R
 
@@ -126,3 +133,4 @@ t.test(x, mu = 5)
 >     print(secilen_sutunlar)
 >
 >     ```
+
