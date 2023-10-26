@@ -37,3 +37,18 @@ category_sales <- myData %>%
 
 print(category_sales)
 ```
+
+```{r}
+#kategori bazında ortalama fiyat
+category_mean_prices <- myData %>% 
+                  group_by(category_id) %>%
+                  summarise(mean_price=mean(price),median_price=median(price) ) %>%
+                  ungroup()
+
+
+print(category_mean_prices)
+```
+
+```{r}
+glimpse(myData)
+```
