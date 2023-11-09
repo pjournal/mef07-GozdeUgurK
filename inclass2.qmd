@@ -18,10 +18,11 @@ library(ggplot2)
 myData = read.csv("/Users/gozde.ugur/Downloads/movies.csv") 
 # Show only first 5 record
 comedy_filmler <- myData %>% filter(Genre == "Comedy") %>% slice(1:50)
-
+myData_50 <- myData %>% slice(1:50)
 #ilk_5_kayit <- head(comedy_filmler, 5)
 # Show only selected columns
 #secilen_sutunlar <- ilk_5_kayit[, c("Title", "Genre", "Year")]
 ggplot(comedy_filmler, aes(x = Year, y = `Audience.score..`, color=`Lead.Studio`)) + geom_point()
+ggplot(myData_50, aes(x = Genre, y = `Audience.score..`, color=`Lead.Studio`)) + geom_point()
 
 ```
