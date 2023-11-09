@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gözde Uğur">
-<meta name="dcterms.date" content="2023-10-26">
+<meta name="dcterms.date" content="2023-11-09">
 
 <title>[STUDENT] Progress Journal - 2&nbsp; inclass1</title>
 <style>
@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./inclass2.html" rel="next">
 <link href="./assignment1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -172,6 +173,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">inclass1</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./inclass2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">inclass2</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -208,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 26, 2023</p>
+      <p class="date">November 9, 2023</p>
     </div>
   </div>
   
@@ -237,13 +244,14 @@ Attaching package: 'dplyr'</code></pre>
     intersect, setdiff, setequal, union</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Using read.csv()</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>myData <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"/Users/gozde.ugur/Downloads/archive (3)/amazon_products.csv"</span>) </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>en_cok_satanlar <span class="ot">&lt;-</span> myData <span class="sc">%&gt;%</span> </span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(boughtInLastMonth)) <span class="sc">%&gt;%</span>  <span class="co"># satisadedi sütununa göre azalan sırada sırala</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">5</span>)  <span class="co"># İlk 5 kaydı getirilk_5_kayit </span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Show only selected columns</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>top_5 <span class="ot">&lt;-</span> en_cok_satanlar[, <span class="fu">c</span>(<span class="st">"title"</span>,<span class="st">"stars"</span>, <span class="st">"price"</span> ,<span class="st">"boughtInLastMonth"</span>)]</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(top_5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>myData <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"/Users/gozde.ugur/Downloads/archive (3)/amazon_products.csv"</span>) </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>en_cok_satanlar <span class="ot">&lt;-</span> myData <span class="sc">%&gt;%</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">arrange</span>(<span class="fu">desc</span>(boughtInLastMonth)) <span class="sc">%&gt;%</span>  <span class="co"># satisadedi sütununa göre azalan sırala</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">head</span>(<span class="dv">5</span>)  <span class="co"># İlk 5 kaydı getirilk_5_kayit </span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Show only selected columns</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>top_5 <span class="ot">&lt;-</span> en_cok_satanlar[, <span class="fu">c</span>(<span class="st">"title"</span>,<span class="st">"stars"</span>, <span class="st">"price"</span> ,<span class="st">"boughtInLastMonth"</span>)]</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(top_5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                                                                                                                                                                            title
 1                                                                                                        Bounty Quick Size Paper Towels, White, 8 Family Rolls = 20 Regular Rolls
@@ -574,6 +582,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./inclass2.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">inclass2</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

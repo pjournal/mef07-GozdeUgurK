@@ -1,0 +1,27 @@
+---
+title: "inclass2"
+author: "Gözde Uğur"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+editor: visual
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+# Using read.csv()
+myData = read.csv("/Users/gozde.ugur/Downloads/movies.csv") 
+# Show only first 5 record
+comedy_filmler <- myData %>% filter(Genre == "Comedy") %>% slice(1:50)
+
+#ilk_5_kayit <- head(comedy_filmler, 5)
+# Show only selected columns
+#secilen_sutunlar <- ilk_5_kayit[, c("Title", "Genre", "Year")]
+ggplot(comedy_filmler, aes(x = Year, y = `Audience.score..`, color=`Lead.Studio`)) + geom_point()
+
+```

@@ -16,6 +16,7 @@ editor: visual
 
 library(dplyr)
 # Using read.csv()
+
 myData = read.csv("/Users/gozde.ugur/Downloads/archive (3)/amazon_products.csv") 
 en_cok_satanlar <- myData %>% 
                  arrange(desc(boughtInLastMonth)) %>%  # satisadedi sütununa göre azalan sırala
