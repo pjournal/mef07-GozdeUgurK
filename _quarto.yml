@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 book:
-  title: "[STUDENT] Progress Journal"
+  title: "Gözde Uğur's Progress Journal"
   repo-url: https://github.com/pjournal/mef07-GozdeUgurK
   chapters:
     - index.qmd
