@@ -1,0 +1,12 @@
+name: Movies
+title: Movies
+username: gozdeugurkayar
+account: gozdeugurkayar
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10623737
+bundleId: 7967720
+url: https://gozdeugurkayar.shinyapps.io/Movies/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

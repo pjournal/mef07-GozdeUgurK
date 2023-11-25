@@ -1,0 +1,22 @@
+---
+title: "Shiny App Example"
+editor: visual
+---
+
+## **Shiny Application about Movies**
+
+-   This app aims to help users analyze and explore movie data interactively.
+
+-   Users can gain insights into how the number of movies in different genres has varied over the years.
+
+-   The visualization provides a quick and intuitive way to observe trends and make comparisons.
+
+## **Link to Shinyapps.io**
+
+[My Shiny App](https://gozdeugurkayar.shinyapps.io/Movies/)
+
+## **Command Line**
+
+```         
+shiny::runGitHub(repo = "pjournal//mef07-GozdeUgurK",subdir="Shiny/app.R")
+```
