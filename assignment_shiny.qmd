@@ -13,7 +13,7 @@ editor: visual
 
 ## **Link to Shinyapps.io**
 
-[My Shiny App](https://gozdeugurkayar.shinyapps.io/Movies/)
+[My Shiny App](https://gozdeugurkayar.shinyapps.io/Shiny/)
 
 ## **Command Line**
 
