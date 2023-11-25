@@ -5,7 +5,7 @@ account: gozdeugurkayar
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10623925
-bundleId: 7967781
+bundleId: 7967809
 url: https://gozdeugurkayar.shinyapps.io/Shiny/
 version: 1
 asMultiple: FALSE
