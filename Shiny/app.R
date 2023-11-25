@@ -1,51 +1,59 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
+# Bu kodu bir app.R dosyasına yapıştırın ve R Studio'da çalıştırın.
 
 library(shiny)
+library(tidyverse)
 
-# Define UI for application that draws a histogram
+#setwd("/Users/gozde.ugur/Documents/GitHub/mef07-GozdeUgurK/Shiny")
+MovieData = read.csv("movies.csv") 
+
+# Prepare data
+film_verisi <- 
+  MovieData %>% 
+  filter(Year >= 2000) %>%
+  select(Genre, Year, `Audience.score..`) 
+
+# Shiny uygulaması
 ui <- fluidPage(
-
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins 
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-           plotOutput("distPlot")
-        )
+  titlePanel("Movie Analysis"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("Genre", "Tür Seç:",
+                  choices = unique(film_verisi$Genre),
+                  multiple = TRUE),
+      br(),
+      sliderInput("year_range", "Yıl Aralığı Seç:",
+                  min = min(film_verisi$Year), max = max(film_verisi$Year), 
+                  value = c(min(film_verisi$Year), max(film_verisi$Year))),
+      br(),
+      sliderInput("score_range", "Puan Aralığı Seç:",
+                  min = 0, max = 100, value = c(0, 100))
+    ),
+    mainPanel(
+      plotOutput("genre_plot")
     )
+  )
 )
 
-# Define server logic required to draw a histogram
 server <- function(input, output) {
-
-    output$distPlot <- renderPlot({
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white',
-             xlab = 'Waiting time to next eruption (in mins)',
-             main = 'Histogram of waiting times')
-    })
+  
+  # Filmleri filtrele
+  filtered_films <- reactive({
+    filter(film_verisi, 
+           Genre %in% input$Genre & 
+             `Audience.score..` >= input$score_range[1] & 
+             `Audience.score..` <= input$score_range[2])
+  })
+  
+  # ggplot ile çubuk grafik çizimi
+  output$genre_plot <- renderPlot({
+    ggplot(filtered_films(), aes(x = Year, fill = Genre)) +
+      geom_bar(position = "dodge") +
+      labs(title = "Film Türüne Göre Yıl Bazında Dağılım",
+           x = "Yıl",
+           y = "Film Sayısı",
+           fill = "Tür") +
+      theme_minimal()
+  })
 }
 
-# Run the application 
-shinyApp(ui = ui, server = server)
+shinyApp(ui, server)

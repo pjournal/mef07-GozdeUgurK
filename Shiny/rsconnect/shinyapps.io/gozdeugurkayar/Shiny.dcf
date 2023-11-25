@@ -1,12 +1,12 @@
-name: Movies
-title: Movies
+name: Shiny
+title: Shiny
 username: gozdeugurkayar
 account: gozdeugurkayar
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 10623737
-bundleId: 7967720
-url: https://gozdeugurkayar.shinyapps.io/Movies/
+appId: 10623925
+bundleId: 7967781
+url: https://gozdeugurkayar.shinyapps.io/Shiny/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
