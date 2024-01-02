@@ -1,0 +1,41 @@
+---
+title: "Operations Research Assignment"
+author: "Gözde Uğur"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+editor: visual
+---
+
+## Business Case Summary: 
+
+**Optimizing Snack Shipping at Mondelēz Turkey Business Challenge:**
+
+Mondelēz Turkey, a leading snack producer, faced the challenge of efficiently shipping its products from its production facility in Gebze to various cities in Turkey. The goal was to develop a shipment plan that maximized efficiency by utilizing the fewest vehicles at the lowest cost. Manual assignment of shipments to vehicles and routes proved to be time-consuming and lacked the guarantee of an optimal solution, especially with a growing list of shipments and complex constraints.
+
+## Problem Description: 
+
+The challenge involved factoring in variables such as capacity, lead time, delivery time, route and vehicle availability, and product-based constraints. With predefined routes and orders sent in full- and partial-truckloads, the number of potential shipping combinations quickly reached the millions. Mondelēz sought a solution provider who could deliver optimal results within reasonable time limits.
+
+## Solution Approach: 
+
+Arute Solutions, a routing optimization provider in Istanbul, employed machine learning and operations research to address Mondelēz's supply chain optimization needs. Arute Solutions developed a Mixed Integer Programming (MIP) model to solve the daily shipping assignment problem. The transition to Gurobi optimization solver significantly improved solution quality and reduced solving time, creating optimal or near-optimal solutions quickly.
+
+## Benefits: 
+
+**Efficiency and Cost-Effectiveness:** Mondelēz now has an automated tool, powered by Gurobi, that calculates shipping schedules much faster than manual methods, ensuring the most efficient and cost-effective option.
+
+**Performance Improvement:** Gurobi runs the model up to 92% faster than the previous commercial solver, providing a substantial advantage and performance improvement.
+
+**Solution Quality:** Gurobi improves solution quality by an average of 7% compared to the previous solver. This includes enhancements in vehicle assignments, vehicle utilization, and total costs.
+
+**Future Application:** Arute Solutions plans to use Gurobi for all future routing and assignment projects and customers, indicating a high level of confidence in the solution's effectiveness.
+
+In summary, the implementation of Gurobi-powered optimization at Mondelēz Turkey has streamlined and significantly improved the efficiency of their shipping operations, ensuring faster, more cost-effective, and higher-quality solutions.
+
+<https://www.gurobi.com/case_studies/mondelez-a-smarter-way-to-ship-snacks/>
+
+<https://p1.aprimocdn.net/gurobi/f2af341e-a126-42fc-bd76-b021013c9b92/originalfile/Case-Study—Mondelez—Partner-Arute-Solutions.pdf>
