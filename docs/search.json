@@ -46,7 +46,7 @@
     "href": "assignment1.html#hypothesis-testing-in-r-programming",
     "title": "1  Assignment 1",
     "section": "1.6 Hypothesis Testing in R Programming",
-    "text": "1.6 Hypothesis Testing in R Programming\nhypothesis is made by the researchers about the data collected for any experiment or data set. A hypothesis is an assumption made by the researchers that are not mandatory true. In simple words, a hypothesis is a decision taken by the researchers based on the data of the population collected. Hypothesis Testing in R Programming is a process of testing the hypothesis made by the researcher or to validate the hypothesis. To perform hypothesis testing, a random sample of data from the population is taken and testing is performed. Based on the results of the testing, the hypothesis is either selected or rejected. This concept is known as Statistical Inference. In this article, we’ll discuss the four-step process of hypothesis testing, One sample T-Testing, Two-sample T-Testing, Directional Hypothesis, one sample -test, two samples -test and correlation test in R programming.\n\n1.6.0.1 One Sample T-Testing\nOne sample T-Testing approach collects a huge amount of data and tests it on random samples. To perform T-Test in R, normally distributed data is required. This test is used to test the mean of the sample with the population. For example, the height of persons living in an area is different or identical to other persons living in other areas.\n\nSyntax: t.test(x, mu) Parameters: x: represents numeric vector of data mu: represents true value of the mean\n\nTo know about more optional parameters of t.test(), try the below command:\nhelp(\"t.test\")\nExample: \n\n# Defining sample vector\nx &lt;- rnorm(100)\n\n# One Sample T-Test\nt.test(x, mu = 5)\n\n\n    One Sample t-test\n\ndata:  x\nt = -48.463, df = 99, p-value &lt; 2.2e-16\nalternative hypothesis: true mean is not equal to 5\n95 percent confidence interval:\n -0.1788992  0.2285021\nsample estimates:\n mean of x \n0.02480145"
+    "text": "1.6 Hypothesis Testing in R Programming\nhypothesis is made by the researchers about the data collected for any experiment or data set. A hypothesis is an assumption made by the researchers that are not mandatory true. In simple words, a hypothesis is a decision taken by the researchers based on the data of the population collected. Hypothesis Testing in R Programming is a process of testing the hypothesis made by the researcher or to validate the hypothesis. To perform hypothesis testing, a random sample of data from the population is taken and testing is performed. Based on the results of the testing, the hypothesis is either selected or rejected. This concept is known as Statistical Inference. In this article, we’ll discuss the four-step process of hypothesis testing, One sample T-Testing, Two-sample T-Testing, Directional Hypothesis, one sample -test, two samples -test and correlation test in R programming.\n\n1.6.0.1 One Sample T-Testing\nOne sample T-Testing approach collects a huge amount of data and tests it on random samples. To perform T-Test in R, normally distributed data is required. This test is used to test the mean of the sample with the population. For example, the height of persons living in an area is different or identical to other persons living in other areas.\n\nSyntax: t.test(x, mu) Parameters: x: represents numeric vector of data mu: represents true value of the mean\n\nTo know about more optional parameters of t.test(), try the below command:\nhelp(\"t.test\")\nExample: \n\n# Defining sample vector\nx &lt;- rnorm(100)\n\n# One Sample T-Test\nt.test(x, mu = 5)\n\n\n    One Sample t-test\n\ndata:  x\nt = -53.822, df = 99, p-value &lt; 2.2e-16\nalternative hypothesis: true mean is not equal to 5\n95 percent confidence interval:\n -0.1435268  0.2222364\nsample estimates:\nmean of x \n0.0393548"
   },
   {
     "objectID": "assignment1.html#reading-a-.csv-file-in-r",
@@ -89,5 +89,33 @@
     "title": "4  Shiny App Example",
     "section": "4.3 Command Line",
     "text": "4.3 Command Line\nshiny::runGitHub(repo = \"pjournal//mef07-GozdeUgurK\",subdir=\"Shiny/app.R\")"
+  },
+  {
+    "objectID": "OR_HW.html#business-case-summary",
+    "href": "OR_HW.html#business-case-summary",
+    "title": "5  Operations Research Assignment",
+    "section": "5.1 Business Case Summary:",
+    "text": "5.1 Business Case Summary:\nOptimizing Snack Shipping at Mondelēz Turkey Business Challenge:\nMondelēz Turkey, a leading snack producer, faced the challenge of efficiently shipping its products from its production facility in Gebze to various cities in Turkey. The goal was to develop a shipment plan that maximized efficiency by utilizing the fewest vehicles at the lowest cost. Manual assignment of shipments to vehicles and routes proved to be time-consuming and lacked the guarantee of an optimal solution, especially with a growing list of shipments and complex constraints. Please find the details here."
+  },
+  {
+    "objectID": "OR_HW.html#problem-description",
+    "href": "OR_HW.html#problem-description",
+    "title": "5  Operations Research Assignment",
+    "section": "5.2 Problem Description:",
+    "text": "5.2 Problem Description:\nThe challenge involved factoring in variables such as capacity, lead time, delivery time, route and vehicle availability, and product-based constraints. With predefined routes and orders sent in full- and partial-truckloads, the number of potential shipping combinations quickly reached the millions. Mondelēz sought a solution provider who could deliver optimal results within reasonable time limits."
+  },
+  {
+    "objectID": "OR_HW.html#solution-approach",
+    "href": "OR_HW.html#solution-approach",
+    "title": "5  Operations Research Assignment",
+    "section": "5.3 Solution Approach:",
+    "text": "5.3 Solution Approach:\nArute Solutions, a routing optimization provider in Istanbul, employed machine learning and operations research to address Mondelēz’s supply chain optimization needs. Arute Solutions developed a Mixed Integer Programming (MIP) model to solve the daily shipping assignment problem. The transition to Gurobi optimization solver significantly improved solution quality and reduced solving time, creating optimal or near-optimal solutions quickly."
+  },
+  {
+    "objectID": "OR_HW.html#benefits",
+    "href": "OR_HW.html#benefits",
+    "title": "5  Operations Research Assignment",
+    "section": "5.4 Benefits:",
+    "text": "5.4 Benefits:\nEfficiency and Cost-Effectiveness: Mondelēz now has an automated tool, powered by Gurobi, that calculates shipping schedules much faster than manual methods, ensuring the most efficient and cost-effective option.\nPerformance Improvement: Gurobi runs the model up to 92% faster than the previous commercial solver, providing a substantial advantage and performance improvement.\nSolution Quality: Gurobi improves solution quality by an average of 7% compared to the previous solver. This includes enhancements in vehicle assignments, vehicle utilization, and total costs.\nFuture Application: Arute Solutions plans to use Gurobi for all future routing and assignment projects and customers, indicating a high level of confidence in the solution’s effectiveness.\nIn summary, the implementation of Gurobi-powered optimization at Mondelēz Turkey has streamlined and significantly improved the efficiency of their shipping operations, ensuring faster, more cost-effective, and higher-quality solutions."
   }
 ]
